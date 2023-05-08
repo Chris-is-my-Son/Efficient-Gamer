@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}
+	Efficient Gamer
+{% endblock %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+{% endblock %}
+
+{% block main %}
+<h1 style="text-align: center;">Hello {{ session.get('username') }}</h1>
+<form class="userform" action="/user_add" method="POST">       
+    
+        <input type="text" name="username" id="username" placeholder="Username" required> <br>        
+        <input type="email" name="email" id="email" placeholder="Email" required> <br>        
+        <input type="password" name="password" id="password" placeholder="Password" required> <br>
+        <select name="admin" id="admin">            
+            <option value=0 selected>Regular User </option>
+            <option value=1>Admin User</option>          
+        </select> <br>
+        <button type="submit">Add New User</button>
+</form><br><br>
+{% endblock %}

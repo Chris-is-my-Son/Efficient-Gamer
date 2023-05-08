@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}
+	Efficient Gamer
+{% endblock %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+{% endblock %}
+
+{% block main %}
+<h1 style="text-align: center;">Hello {{ session.get('username') }}</h1>
+<form class="userform" action="/update_review/{{reviews[0]}}" method="POST">   
+    <label for="title">Title of Game: </label><br>
+    <input type="text" name="title" id="title" value="{{reviews[2]}}" required> <br>
+    <label for="review">Give a review of your game: </label><br>
+    <textarea type="text" name="review" id="review" rows="2" cols="20" value="{{reviews[3]}}" required></textarea><br>
+    <button type="submit">Update Review</button>
+</form><br><br>
+{% endblock %}

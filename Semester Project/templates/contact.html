@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}
+	Contact &mdash; Efficient Gamer
+{% endblock %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+{% endblock %}
+
+{% block main %}
+<h2>Contact Efficient Gamer</h2>
+<p>Fill out the form below to contact Efficient Gamer on what to review next!</p>					
+<form name="contact" method="post" id="contact" action="https://webdevbasics.net/scripts/demo.php">
+	<label for="myName">Full Name: </label>
+	<input type="text" id="myName" name="myName">
+	<label for="myEmail">E-mail: </label>
+	<input type="text" id="myEmail" name="myEmail">
+	<input type="button" id="emailCheck" value="Check Email">
+	<p id="emailStatus"></p>
+	<label for="zipCode">Enter your zip zode: </label>
+	<input type="text" id="zipCode" name="zipCode">
+	<p id="zipStatus"></p>
+	<label for="myGame">Game you'll be checking out: </label>
+	<input list="games" id="myGame" name="myGame">
+	<datalist id="games">
+		<option>Minecraft</option>
+		<option>Terraria</option>
+		<option>Starcraft 2</option>
+		<option>Age of Empires: Definitive Edition</option>
+		<option>League of Legends</option>
+		<option>Heroes of the Storm</option>
+		<option>The Forest</option>
+		<option>The Last Stand: Aftermath</option>
+	</datalist>
+	<label for="myComments">Comments: </label>
+	<textarea name="myComments" id="myComments" rows="2" cols="20"></textarea><br>
+	<input type="submit" id="mySubmit" value="Beam Me Up!" onclick="validation()">
+</form><br><br>
+{% endblock %}

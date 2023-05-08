@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}
+	Efficient Gamer
+{% endblock %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+{% endblock %}
+
+{% block main %}
+<h2>Welcome to Efficient Gamer!</h2>
+<p>If you're wondering what this is, we're here to help you find the perfect, high quality game for a reasonable price or just a game with great value no matter the price.</p>
+<div id="flow">
+	<section>
+		<h3>Great Deals!</h3>
+		<p>Our goal is to help you find a great price for any type of game you want. That means anything from action packed shooter games to calm casual zen games.<br>Whatever you're looking for at a great price!</p>
+	</section>
+	<section>
+		<h3>Research Based Reviews!</h3>
+		<p>We take our reviews seriously. Excellence is our number one value, so you can trust that our reviews have been well researched by the members of our team.<br><a href="{{ url_for('reviewPage') }}">See reviews here.</a></p>
+	</section>
+	<section>
+		<h3>You can even search company websites for some games!</h3>
+		<div class="image">
+			<a href="https://www.ea.com/" class="ea"><img src="{{ url_for('static', filename='effigamer/ea.gif') }}" alt="EA" class="image-size ea"></a>
+			<a href="https://www.epicgames.com/site/en-US/home" class="epic"><img src="{{ url_for('static', filename='effigamer/epic.gif') }}" alt="Epic" class="image-size epic"></a>
+			<a href="https://www.activision.com/" class="activision"><img src="{{ url_for('static', filename='effigamer/activision.gif') }}" alt="Activision" class="image-size activision"></a>
+			<a href="https://www.microsoft.com/en-us/store/games/windows" class="microsoft"><img src="{{ url_for('static', filename='effigamer/microsoft.gif') }}" alt="Microsoft" class="image-size microsoft"></a>
+			<a href="https://www.playstation.com/en-us/" class="sony"><img src="{{ url_for('static', filename='effigamer/sony.gif') }}" alt="Sony" class="image-size sony"></a>
+		</div>
+	</section>
+</div>
+<div class="address">
+	Efficient Gamer<br>
+	<a id="mobile" href="tel:800-555-5555">800-555-5555</a><span id="desktop">800-555-5555</span><br>
+	69420 Gamer Lane<br>
+	Gamer Central, TX 42069<br><br>
+</div><br><br>
+{% endblock %}

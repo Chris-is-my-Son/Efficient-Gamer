@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}
+	Login &mdash; Efficient Gamer
+{% endblock %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+{% endblock %}
+
+{% block main %}
+<h2>Login</h2>
+<form method="POST" action="/login">
+    <label for="username">Username:</label>
+    <input type="text" name="username">
+    <label for="password">Password:</label>
+    <input type="password" name="password">
+    <input type="submit" value="Login">
+    <button type="submit" formaction="/register">Register</button>
+</form><br><br>
+{% endblock %}

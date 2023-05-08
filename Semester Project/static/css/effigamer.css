@@ -1,0 +1,398 @@
+body {
+	background-color: #003442;
+	color: #003366;
+	font-family: Verdana, Arial, "Times New Roman";
+	margin: 0;
+}
+header {
+	background-color: #003442;
+	color: #F0F0F0;
+	font-family: Verdana, Arial, "Times New Roman";
+	background-image: url(/static/effigamer/butler.gif);
+	background-size: 300px 200px;
+	background-position: center;
+	background-repeat: no-repeat;
+	text-align: center;
+	padding: 1em;
+}
+p {
+	text-align: center;
+}
+header a {
+	text-decoration: none;
+}
+header a:link {
+	color: #FFCBBD;
+}
+header a:visited {
+	color: #FFCBBD;
+}
+header a:hover {
+	color: #CCD6D9;
+}
+header a:active {
+	color: #000
+}
+a:link {
+	color: #3BB9B9;
+}
+a:visited {
+	color: #3BB9B9;
+}
+a:hover {
+	color: #B53737
+}
+h1{
+	font-size: 2em;
+	padding: 0.2em;
+	text-shadow: 10px 10px 10px #ccc;
+}
+h2 {
+	font-size: 1.2em;
+	text-shadow: 1px 1px 1px #777;
+	text-align: center;
+}
+.disclaimer {
+	color: #ff0000;
+}
+.links {
+	padding: .5em;
+	margin-top: 0;
+	margin-bottom: 3em;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 90%;
+	font-size: 125%;
+	background-color: #A3E5D3;
+	text-align: center;
+	border: 2px solid #00008B;
+	text-shadow: .5px .5px .5px #000;
+}
+h4 a {
+	text-decoration: none;
+	
+}
+h4 a:link {
+	color: #609E60;
+	text-shadow: 2px 2px 2px #000;
+}
+h4 a:visited {
+	color: #609E60;
+	text-shadow: 2px 2px 2px #000;
+}
+h4 a:hover {
+	color: #B53737;
+}
+h4 a:active {
+	color: #000;
+}
+td a {
+	text-decoration: none;
+}
+td a:link {
+	color: #3BB9B9;
+}
+td a:visited {
+	color: #3BB9B9;
+}
+td a:hover {
+	color: #B53737
+}
+td a:active {
+	color: #000;
+}
+nav {
+	text-align: center;
+	background-color: #CCD6D9;
+}
+nav ul {
+	list-style-type: none;
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
+}
+nav li {
+	height: 55px;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	width: auto;
+	border-bottom: 1px solid #91B2C7;
+}
+.home {
+	position: relative;
+	bottom: 6px;
+	left: 1px;
+	height: 50px;
+}
+.reviews {
+	position: relative;
+	bottom: 3px;
+	left: 2px;
+	height: 45px;
+}
+.contact {
+	position: relative;
+	bottom: 6px;
+	left: 1px;
+	height: 50px;
+}
+.reviews-title {
+	text-decoration: underline;
+	font-size: 150%;
+}
+.category {
+	font-weight: bold;
+	color: #5380C5;
+	font-family: Verdana, Arial, "Times New Roman";
+}
+.address {
+	clear: left;
+}
+.bottom-nav {
+	background-color: #F6F8ED;
+	margin-left: 1em;
+}
+nav a {
+	text-decoration: none;
+}
+footer {
+	font-size: 0.70em;
+	font-style: italic;
+	text-align: center;
+	padding: 1em;
+	background-color: #CCD6D9;
+}
+#mobile {
+	display: inline;
+}
+#desktop {
+	display: none;
+}
+#anchor {
+	text-align: center;
+	caption-side: bottom;
+}
+main {
+	padding-left: 2em;
+	padding-right: 2em;
+	background-color: #F6F8ED;
+	border: 1px solid #AEC3E3;
+	overflow: auto;
+	display: block;
+}
+* { 
+	box-sizing: border-box;
+}
+section {
+	margin-right: 1em;
+	margin-bottom: 1em;
+	padding: 0;
+	background-color: #EAEAEA;
+}
+section h3 {
+	padding: .5em;
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 110%;
+	background-color: #91B2C7;
+	text-align: center;
+}
+section p {
+	padding-top: 0;
+	padding-left: .25em;
+	padding-right: .25em;
+	padding-bottom: .25em;
+	text-align: left;
+}
+.image {
+	display: grid;
+	grid-template-columns: repeat(7, auto);
+	grid-template-rows: repeat(3, 100px);
+	grid-gap: 7.5px;
+	margin: 15px;
+	height: 225px;
+}
+.image-size {
+	width: 100%;
+	height: 100%;
+}
+.ea {
+	grid-column-start: span 2;
+	grid-row-start: span 1;
+}
+.epic {
+	grid-column-start: span 2;
+	grid-row-start: span 1;
+}
+.activision {
+	grid-column-start: span 2;
+	grid-row-start: span 1;
+}
+.microsoft {
+	grid-column-start: span 3;
+	grid-row-start: span 1;
+}
+.sony {
+	grid-column-start: span 3;
+	grid-row-start: span 1;
+}
+.action {
+	text-align: right;
+}
+table {
+	margin: 3em;
+	border: 3px solid #00008B;
+	border-collapse: collapse;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 90%;
+	background-color: #FAF5EF;
+	font-size: 70%;
+}
+caption {
+	padding: .5em;
+	border: 3px solid #00008B;
+	border-bottom: 0 solid #00008B;
+	font-size: 110%;
+	font-weight: bold;
+	color: #000;
+	background-color: #609E60;
+}
+th {
+	padding: .5em;
+	border: 2px solid #00008B;
+	background-color: #8FE38F;
+}
+td {
+	padding: .5em;
+	border: 2px solid #00008B;
+	text-align: left;
+	vertical-align: top;
+}
+td a {
+	text-decoration: none;
+}
+form {
+	display: flex;
+	flex-direction: column;
+	padding-left: 1em;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0;
+}
+input, textarea {
+	margin-bottom: .5em;
+}
+@media (min-width: 600px) {
+	header {
+		background-image: url(/static/effigamer/butler.gif);
+		background-size: 375px 275px;
+		background-position: right;
+		background-repeat: no-repeat;
+	}
+	h1 {
+		font-size: 3em;
+	}
+	nav ul {
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-around;
+	}
+	nav li {
+		height: 115px;
+		border-bottom: none;
+	}
+	.home {
+		position: relative;
+		bottom: 3px;
+		height: 105px;
+	}
+	.reviews {
+		position: relative;
+		bottom: 3px;
+		height: 105px;
+	}
+	.contact {
+		position: relative;
+		bottom: 3px;
+		height: 105px;
+	}
+	#flow {
+		display: flex;
+		flex-flow: row wrap;
+	}
+	section {
+		min-width: 30%;
+		flex: 1;
+	}
+	dl {
+		flex: 2;
+	}
+	img {
+		flex: 1;
+	}
+	#mobile {
+		display: none;
+	}
+	#desktop {
+		display: inline;
+	}
+	form {
+		width: 40%;
+		position: relative;
+	}
+	.image {
+		height: 205px;
+	}
+	table {
+		font-size: 85%;
+	}
+	td {
+		text-align: left;
+	}
+}
+@media (min-width: 1024px) {
+	@supports (display: grid) {	
+		header {
+			grid-area: header;
+		}
+		nav {
+			grid-area: nav;
+		}
+		main {
+			grid-area: main;
+		}
+		footer {
+			grid-area: footer;
+		}
+		#wrapper {
+			display: grid;
+			grid-template: 
+				"header header header"
+				"nav nav nav"
+				"main main main"
+				"footer footer footer"
+				/ 180px;
+		}
+		body {
+			max-width: 80%;
+			margin: auto;
+			background-image: url(/static/effigamer/creeper.gif), url(/static/effigamer/minelogo.gif), url(/static/effigamer/elden.gif);
+			background-position: 100% 100%, 100% 0%, 0% 75%;
+			background-repeat: no-repeat, no-repeat, no-repeat;
+			background-attachment: fixed, fixed, fixed;
+			background-size: 10% 76%, 10% 25%, 10% 100%;
+		}
+		main {
+			height: auto;
+		}
+		table {
+			font-size: 110%;
+		}
+		.links {
+			max-width: 50%;
+		}
+	}
+}

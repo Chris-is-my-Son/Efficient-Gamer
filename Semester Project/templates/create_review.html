@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}
+	Efficient Gamer
+{% endblock %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+{% endblock %}
+
+{% block main %}
+<h1 style="text-align: center;">Hello {{ session.get('username') }}</h1>
+<form class="userform" action="/add_review" method="POST">   
+    <label for="title">Title of Game: </label><br>
+    <input type="text" name="title" id="title" placeholder="Space Invaders" required> <br>
+    <label for="review">Give a review of your game: </label><br>
+    <textarea type="text" name="review" id="review" rows="2" cols="20" placeholder="This is amazing!" required></textarea><br>
+    <button type="submit">Add Review</button>
+</form><br><br>
+{% endblock %}

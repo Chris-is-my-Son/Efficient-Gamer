@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %}
+	Reviews &mdash; Efficient Gamer
+{% endblock %}
+
+{% block head %}
+	<script src="{{ url_for('static', filename='js/reviews.js') }}" defer></script>
+{% endblock %}
+
+{% block body %}
+{% endblock %}
+
+{% block main %}
+<h2><span class="disclaimer">&#9888;Disclaimer!&#9888;</span><br>These reviews are purely opinionated as they are<br>written by our personal experience with these games.</h2><br>
+<div class="links">
+<h4><span class="reviews-title">Reviews</span><br><br>
+<a id="clickMeButton">Click Me</a><br>
+</h4>
+</div>
+<div id="flow" class="container">
+	<table>
+		<caption id="caption"></caption>
+		<tr>
+			<th></th>
+			<th id="headerLeft"></th>
+			<th id="headerRight"></th>
+		</tr>
+		<tr>
+			<th id="gameplayHeader">Gameplay</th>
+			<td id="gameplayLeft"></td>
+			<td id="gameplayRight"></td>
+		</tr>
+		<tr>
+			<th id="visualsHeader">Visuals and<br>Sound/Music</th>
+			<td id="visualLeft"></td>
+			<td id="visualRight"></td>
+		</tr>
+		<tr>
+			<th id="priceHeader">Price</th>
+			<td id="priceLeft"></td>
+			<td id="priceRight"></td>
+		</tr>
+	</table>
+</div>
+<hr>
+{% for x in reviews %}
+        <article>
+          <h1 style="text-align: center;">{{ x[2] }}</h1>
+          <p>{{ x[3] }}</p>
+          <div style="text-align: center;">by {{ x[1] }} on {{ x[4]}}</div><br>
+            <div class="action">
+              {% if session.get("username")== x[1] or (session.get("isadmin") == 1) %}
+                {% if session.get("username")== x[1] %}
+                <a href="/update_review/{{x[0]}}">Edit</a>&nbsp; &nbsp;
+                {% endif %}
+                <a href="/delete_review/{{x[0]}}" onclick="return confirm('Are you sure you want to delete this item?');">Delete</a>
+              {% endif %}
+            </div>
+        </article>
+        {% if not loop.last %}
+          <hr>
+        {% endif %}
+{% endfor %}
+<br><br>
+<h2><a href="/create_review">Add New Review</a></h2><br><br>
+<div id="anchor">
+	<a href="#top">Back to top</a><br><br>
+</div><br><br>
+{% endblock %}

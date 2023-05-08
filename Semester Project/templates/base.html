@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>{% block title %}{% endblock %}</title>
+		<meta charset="UTF-8">
+		<meta name="description" content="The Best Games for a Great Price">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/effigamer.css') }}">
+		<script src="{{ url_for('static', filename='js/effigamer.js') }}" defer></script>
+        {% block head %}{% endblock %}
+	</head>
+	<body>
+		<header>
+			<h1><a href="/">Efficient Gamer</a></h1>
+		</header>
+		<nav>
+			<ul>
+				{% if session.get('loggedin') is not none %}
+				<li><a href="/"><img src="{{ url_for('static', filename='effigamer/controller.gif') }}" alt="Home" class="home"></a></li>
+				<li><a href="/reviewPage"><img src="{{ url_for('static', filename='effigamer/reviews.gif') }}" alt="Reviews" class="reviews"></a></li>
+				<li><a href="/contact"><img src="{{ url_for('static', filename='effigamer/contact.gif') }}" alt="Contact" class="contact"></a></li>
+				{% if session.get('isadmin') == 1 %}
+				<li><a href="/admin">Admin</a></li>
+				{% endif %}
+				<li><a href="/logout">Logout</a></li>
+				{% endif %}
+				
+			
+			</ul>
+		</nav>
+		<main>
+		{% if session.get('loggedin') is not none %}
+			<h2>{{session['username']}} is logged in</h2>
+		{% endif %}
+		{% if result %}
+			<h2 style="color: green;">{{msg}}</h2>
+		{% else %}
+			<h2 style="color: red;">{{msg}}</h2>
+		{% endif %}
+		{% block main %}{% endblock %}
+		{% if session.get('loggedin') is not none %}
+			<nav class="bottom-nav">
+				<a href="/">Home</a>&nbsp;&nbsp;&nbsp;
+				<a href="/reviewPage">Reviews</a>&nbsp;&nbsp;&nbsp;
+				<a href="/contact">Contact</a>&nbsp;&nbsp;&nbsp;
+			</nav><br>
+		{% endif %}
+		</main>
+		{% block body %}{% endblock %}
+		<footer>
+			Copyright &copy; 2022 Efficient Gamer<br>
+			<a href="mailto:ajgonzales42@amarillocollege.com">Andrew Gonzales</a>
+			<div>
+				<script>
+					document.write('Last modified on: '+ document.lastModified);
+				</script>
+			</div>
+		</footer>
+	</body>
+</html>
